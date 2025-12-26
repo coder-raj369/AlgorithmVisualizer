@@ -14,8 +14,16 @@ public class Algorithm_Details extends javax.swing.JDialog {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Algorithm_Details.class.getName());
 
     /**
-     * Creates new form Algorithm_Details
-     */
+ * Creates new form Algorithm_Details with parent frame and modality.
+ *
+ * @param parent the parent frame for this dialog
+ * @param modal true for modal dialog, false for model
+ */
+    
+    public Algorithm_Details(java.awt.Frame parent, boolean modal) {
+        this(parent, modal, null); // Calls the main constructor with null algorithm
+    }
+    
     public Algorithm_Details(java.awt.Frame parent, boolean modal, Algorithm algorithm) {
         super(parent, modal);
         initComponents();
@@ -45,6 +53,7 @@ public class Algorithm_Details extends javax.swing.JDialog {
         // Better text wrapping for long descriptions
         jTextArea1.setLineWrap(true);
         jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setEditable(false);
     }
 
     /**

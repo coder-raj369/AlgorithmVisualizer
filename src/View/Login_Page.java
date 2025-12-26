@@ -13,16 +13,20 @@ import Controller.NavigationController;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
+import javax.swing.ImageIcon;
+import java.awt.Image;
+
 
 public class Login_Page extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login_Page.class.getName());
-
+    
     /**
      * Creates new form Login_Page
      */
     public Login_Page() {
         initComponents();
+        
     }
 
     /**
@@ -54,11 +58,11 @@ public class Login_Page extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
+            .addGap(0, 618, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -123,7 +127,7 @@ public class Login_Page extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(Registerbtn))
                             .addComponent(LoginBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(54, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,6 +159,11 @@ public class Login_Page extends javax.swing.JFrame {
         // TODO add your handling code here:
         LoginBtn.doClick();
     }//GEN-LAST:event_PasswordFieldActionPerformed
+
+    
+    
+    
+    
 
     private void RegisterbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterbtnActionPerformed
         // TODO add your handling code here:

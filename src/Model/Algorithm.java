@@ -16,6 +16,7 @@ public class Algorithm {
     private String type;
     private String category;
     private String description;
+   
 
     public Algorithm(int id, String name, String type, String category, String description) {
         this.id = id;
@@ -23,6 +24,7 @@ public class Algorithm {
         this.type = type;
         this.category = category;
         this.description = description;
+        
     }
 
     public int getId() { return id; }

@@ -179,6 +179,17 @@ public class Database {
         }
         return result;
     }
+    public List<Algorithm> getAlgorithmsForUser(User currentUser) {
+        List<Algorithm> userAlgorithms = new ArrayList<>();
+
+        // If admin, return all algorithms
+        if ("admin".equals(currentUser.getRole())) {
+            return new ArrayList<>(algorithms); // Return copy
+        }
+
+        
+        return userAlgorithms;
+    }
 
     public int getTotalAlgorithms() {
         return algorithms.size();
