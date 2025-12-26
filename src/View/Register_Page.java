@@ -7,6 +7,8 @@ package View;
 import Controller.AuthController;
 import Controller.NavigationController;
 import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+import java.awt.Image;
 /**
  *
  * @author rajpandit
@@ -20,6 +22,21 @@ public class Register_Page extends javax.swing.JFrame {
      */
     public Register_Page() {
         initComponents();
+        setLogo();
+    }
+    private void setLogo() {
+        ImageIcon icon = new ImageIcon(
+            getClass().getResource("/Image/Logo.jpg")
+        );
+
+        Image img = icon.getImage();
+        Image scaledImg = img.getScaledInstance(
+            jLabel6.getWidth(),
+            jLabel6.getHeight(),
+            Image.SCALE_SMOOTH
+        );
+
+        jLabel6.setIcon(new ImageIcon(scaledImg));
     }
 
     /**
@@ -32,6 +49,7 @@ public class Register_Page extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         PasswordField = new javax.swing.JPasswordField();
         backLoginBtn = new javax.swing.JButton();
@@ -48,15 +66,24 @@ public class Register_Page extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 102));
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Logo.jpg"))); // NOI18N
+        jLabel6.setOpaque(true);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(72, 72, 72)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(86, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(82, 82, 82)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -231,6 +258,7 @@ public class Register_Page extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

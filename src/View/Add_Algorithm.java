@@ -80,7 +80,6 @@ public class Add_Algorithm extends javax.swing.JDialog {
         jLabel2.setText("Algotithm Name:");
 
         jTextField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jTextField1.setText("jTextField1");
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel4.setText("Category: ");
